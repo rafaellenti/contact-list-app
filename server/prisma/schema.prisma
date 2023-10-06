@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model contato {
+  id       Int        @id @default(autoincrement())
+  nome     String     @db.VarChar(45)
+  idade    Int
+  telefone telefone[]
+}
+
+model telefone {
+  id        Int     @id @default(autoincrement())
+  numero    String  @db.VarChar(16)
+  idContato Int
+  contato   contato @relation(fields: [idContato], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "telefone_ibfk_1")
+
+  @@index([idContato], map: "telefone_ibfk_1")
+}

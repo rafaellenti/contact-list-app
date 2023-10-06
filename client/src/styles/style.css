@@ -1,0 +1,44 @@
+.App {
+    height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-list {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.form-errors {
+    gap: 1px;
+    color: red;
+}
+
+.edit-button {
+    margin-right: 1rem;
+}
+
+.search-bar {
+    width: 53%;
+    text-align: center;
+}
+
+.scroll-list {
+    max-height: 700px;
+    overflow-y: auto;
+}
